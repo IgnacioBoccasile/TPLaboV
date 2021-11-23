@@ -5,13 +5,20 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import android.app.Activity;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
+import android.text.Html;
 import android.view.MenuItem;
 import android.content.Intent;
 import android.os.Bundle;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import pl.droidsonroids.gif.GifImageView;
 
 public class MainActivity extends AppCompatActivity implements MyOnItemClick
 {
@@ -28,6 +35,10 @@ public class MainActivity extends AppCompatActivity implements MyOnItemClick
     private MediaPlayer nombrarPersonaje;
 
     private MediaPlayer temaDePersonaje;
+
+    private GifImageView stancePersonaje;
+
+    private String titulo = "hola";
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -69,7 +80,11 @@ public class MainActivity extends AppCompatActivity implements MyOnItemClick
 
         ActionBar actionBar = getSupportActionBar();
 
-        actionBar.setTitle("ELEGÍ UN LUCHADOR!");
+        actionBar.setTitle(Html.fromHtml("<font color=\"#FFFF00\">" + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp MORTAL KOMBAT WIKI" + "</font>"));
+
+        Drawable d= getResources().getDrawable(R.drawable.fondo_menu);
+
+        actionBar.setBackgroundDrawable(d);
     }
 
     @Override

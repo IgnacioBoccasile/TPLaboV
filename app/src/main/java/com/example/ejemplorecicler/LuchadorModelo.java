@@ -1,5 +1,6 @@
 package com.example.ejemplorecicler;
 
+
 import java.io.Serializable;
 
 public class LuchadorModelo implements Serializable
@@ -10,7 +11,7 @@ public class LuchadorModelo implements Serializable
 
     public LuchadorModelo() { }
 
-    public LuchadorModelo(String nombre, int imagenPersonaje)
+    public LuchadorModelo(String nombre, Integer imagenPersonaje)
     {
         this.nombre = nombre;
 
@@ -75,11 +76,5 @@ public class LuchadorModelo implements Serializable
         retorno += this.imagenPersonaje.hashCode();
 
         return retorno;
-    }
-
-    @Override
-    public String toString()
-    {
-        return this.nombre;
     }
 }

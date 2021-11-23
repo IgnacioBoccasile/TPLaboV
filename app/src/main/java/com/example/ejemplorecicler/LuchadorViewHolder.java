@@ -6,13 +6,15 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import pl.droidsonroids.gif.GifImageView;
+
 public class LuchadorViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener
 {
     private MyOnItemClick listener;
 
     private int position;
 
-    ImageView iconoPrincipal;
+    GifImageView iconoPrincipal;
 
     public LuchadorViewHolder(View viewItemLayout, MyOnItemClick listener)
     {

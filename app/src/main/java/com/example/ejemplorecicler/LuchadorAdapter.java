@@ -44,51 +44,51 @@ public class LuchadorAdapter extends RecyclerView.Adapter<LuchadorViewHolder>
         switch(position)
         {
             case 0:
-                holder.iconoPrincipal.setImageResource(R.mipmap.ic_liu_kang_round);
+                holder.iconoPrincipal.setImageResource(R.drawable.stance_liu_kang);
                 break;
 
             case 1:
-                holder.iconoPrincipal.setImageResource(R.mipmap.ic_kung_lao_round);
+                holder.iconoPrincipal.setImageResource(R.drawable.stance_kung_lao);
                 break;
 
             case 2:
-                holder.iconoPrincipal.setImageResource(R.mipmap.ic_johnny_cage_round);
+                holder.iconoPrincipal.setImageResource(R.drawable.stance_johnny_cage);
                 break;
 
             case 3:
-                holder.iconoPrincipal.setImageResource(R.mipmap.ic_reptile_round);
+                holder.iconoPrincipal.setImageResource(R.drawable.stance_reptile);
                 break;
 
             case 4:
-                holder.iconoPrincipal.setImageResource(R.mipmap.ic_sub_zero_round);
+                holder.iconoPrincipal.setImageResource(R.drawable.stance_sub_zero);
                 break;
 
             case 5:
-                holder.iconoPrincipal.setImageResource(R.mipmap.ic_shang_tsung_round);
+                holder.iconoPrincipal.setImageResource(R.drawable.stance_shang_tsung);
                 break;
 
             case 6:
-                holder.iconoPrincipal.setImageResource(R.mipmap.ic_kitana_round);
+                holder.iconoPrincipal.setImageResource(R.drawable.stance_kitana);
                 break;
 
             case 7:
-                holder.iconoPrincipal.setImageResource(R.mipmap.ic_jax_round);
+                holder.iconoPrincipal.setImageResource(R.drawable.stance_jax);
                 break;
 
             case 8:
-                holder.iconoPrincipal.setImageResource(R.mipmap.ic_mileena_round);
+                holder.iconoPrincipal.setImageResource(R.drawable.stance_mileena);
                 break;
 
             case 9:
-                holder.iconoPrincipal.setImageResource(R.mipmap.ic_baraka_round);
+                holder.iconoPrincipal.setImageResource(R.drawable.stance_baraka);
                 break;
 
             case 10:
-                holder.iconoPrincipal.setImageResource(R.mipmap.ic_scorpion_round);
+                holder.iconoPrincipal.setImageResource(R.drawable.stance_scorpion);
                 break;
 
             case 11:
-                holder.iconoPrincipal.setImageResource(R.mipmap.ic_raiden_round);
+                holder.iconoPrincipal.setImageResource(R.drawable.stance_raiden);
                 break;
         }
 

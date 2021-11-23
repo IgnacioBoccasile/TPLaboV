@@ -2,10 +2,13 @@ package com.example.ejemplorecicler;
 
 import android.app.Activity;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+
+import pl.droidsonroids.gif.GifImageView;
 
 public class LuchadorVista
 {
@@ -16,6 +19,8 @@ public class LuchadorVista
     private TextView txtNombre;
 
     private ImageView imagenLuchador;
+
+    private GifImageView stanceLuchador;
 
     public LuchadorVista(Activity activity, LuchadorModelo modelo, LuchadorControlador controlador)
     {
@@ -28,6 +33,8 @@ public class LuchadorVista
         this.imagenLuchador = this.activity.findViewById(R.id.imagenLuchador);
 
         this.imagenLuchador.setImageResource(modelo.getImagenPersonaje());
+
+        this.stanceLuchador = this.activity.findViewById(R.id.stanceLuchador);
 
         ActionBar actionBar = ((AppCompatActivity) this.activity).getSupportActionBar();
 
