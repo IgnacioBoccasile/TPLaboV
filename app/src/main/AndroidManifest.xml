@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_mk_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EjemploRecicler">
-        <activity android:name=".ProductoActivity"></activity>
+        <activity android:name=".LuchadorActivity"></activity>
         <activity android:name=".MainActivity"
             android:exported = "true"
             >

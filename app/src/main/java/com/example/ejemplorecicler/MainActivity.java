@@ -3,26 +3,31 @@ package com.example.ejemplorecicler;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.media.MediaPlayer;
 import android.view.MenuItem;
 import android.content.Intent;
 import android.os.Bundle;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements MyOnItemClick
 {
-    private List<ProductoModelo> productos;
+    private List<LuchadorModelo> luchadores;
 
-    private ProductoAdapter adapter;
+    private LuchadorAdapter adapter;
 
     private int itemElegido;
 
     private MediaPlayer temaDeFondo;
 
+    private MediaPlayer elegirPersonaje;
+
     private MediaPlayer nombrarPersonaje;
+
+    private MediaPlayer temaDePersonaje;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -37,29 +42,30 @@ public class MainActivity extends AppCompatActivity implements MyOnItemClick
 
         setContentView(R.layout.activity_main);
 
-        this.productos = new ArrayList<>();
+        this.luchadores = new ArrayList<>();
 
-        this.productos.add(new ProductoModelo("Celular", "15", "65000"));
-        this.productos.add(new ProductoModelo("Monitor", "0", "35000"));
-        this.productos.add(new ProductoModelo("Procesador i9", "3", "85000"));
-        this.productos.add(new ProductoModelo("Módem", "9", "12500"));
-        this.productos.add(new ProductoModelo("Pendrive 1T", "80", "8600"));
-        this.productos.add(new ProductoModelo("Mouse", "19", "7000"));
-        this.productos.add(new ProductoModelo("Laptop", "4", "265000"));
-        this.productos.add(new ProductoModelo("Teclado", "6", "5000"));
-        this.productos.add(new ProductoModelo("Webcam", "1", "14800"));
-        this.productos.add(new ProductoModelo("Placa de video", "0", "195490"));
-        this.productos.add(new ProductoModelo("Router", "6", "9000"));
+        this.luchadores.add(new LuchadorModelo("Liu Kang", R.drawable.img_liu_kang));
+        this.luchadores.add(new LuchadorModelo("Kung Lao", R.drawable.img_kung_lao));
+        this.luchadores.add(new LuchadorModelo("Johnny Cage", R.drawable.img_johnny_cage));
+        this.luchadores.add(new LuchadorModelo("Reptile", R.drawable.img_reptile));
+        this.luchadores.add(new LuchadorModelo("Sub Zero", R.drawable.img_sub_zero));
+        this.luchadores.add(new LuchadorModelo("Shang Tsung", R.drawable.img_shang_tsung));
+        this.luchadores.add(new LuchadorModelo("Kitana", R.drawable.img_kitana));
+        this.luchadores.add(new LuchadorModelo("Jax", R.drawable.img_jax));
+        this.luchadores.add(new LuchadorModelo("Mileena", R.drawable.img_mileena));
+        this.luchadores.add(new LuchadorModelo("Baraka", R.drawable.img_baraka));
+        this.luchadores.add(new LuchadorModelo("Scorpion", R.drawable.img_scorpion));
+        this.luchadores.add(new LuchadorModelo("Raiden", R.drawable.img_raiden));
 
-        this.adapter = new ProductoAdapter(productos, this);
+        this.adapter = new LuchadorAdapter(luchadores, this);
 
         RecyclerView rv = super.findViewById(R.id.rv);
 
         rv.setAdapter(adapter);
 
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(this,4);
 
-        rv.setLayoutManager(linearLayoutManager);
+        rv.setLayoutManager(gridLayoutManager);
 
         ActionBar actionBar = getSupportActionBar();
 
@@ -79,15 +85,21 @@ public class MainActivity extends AppCompatActivity implements MyOnItemClick
     @Override
     protected void onRestart()
     {
+        elegirPersonaje.pause();
+
+        nombrarPersonaje.pause();
+
+        temaDePersonaje.pause();
+
         temaDeFondo.start();
 
         temaDeFondo.setLooping(true);
 
-        if (ProductoActivity.producto != null)
+        if (LuchadorActivity.luchador != null)
         {
-            List<ProductoModelo> productos = this.adapter.getProductos();
+            List<LuchadorModelo> luchadores = this.adapter.getLuchadores();
 
-            this.productos.set(this.itemElegido, ProductoActivity.producto);
+            this.luchadores.set(this.itemElegido, LuchadorActivity.luchador);
 
             this.adapter.notifyItemChanged(this.itemElegido);
         }
@@ -109,21 +121,147 @@ public class MainActivity extends AppCompatActivity implements MyOnItemClick
     @Override
     public void onItemClick(int position)
     {
-        Intent intent = new Intent(this, ProductoActivity.class);
+        Intent intent = new Intent(this,LuchadorActivity.class);
 
-        intent.putExtra("producto", this.productos.get(position));
+        intent.putExtra("luchador", this.luchadores.get(position));
 
         this.itemElegido = position;
 
         startActivity(intent);
 
-        if(this.itemElegido == 1)
+        switch(this.itemElegido)
         {
-            temaDeFondo.pause();
+            case 0:
+                temaDeFondo.pause();
+                elegirPersonaje = MediaPlayer.create(this, R.raw.efecto_elegir);
+                elegirPersonaje.start();
+                nombrarPersonaje = MediaPlayer.create(this, R.raw.nombre_liu_kang);
+                temaDePersonaje = MediaPlayer.create(this,R.raw.tema_liu_kang);
+                elegirPersonaje.setNextMediaPlayer(nombrarPersonaje);
+                nombrarPersonaje.setNextMediaPlayer(temaDePersonaje);
+                temaDePersonaje.setLooping(true);
+                break;
 
-            nombrarPersonaje = MediaPlayer.create(this, R.raw.nombre_liu_kang);
+            case 1:
+                temaDeFondo.pause();
+                elegirPersonaje = MediaPlayer.create(this, R.raw.efecto_elegir);
+                elegirPersonaje.start();
+                nombrarPersonaje = MediaPlayer.create(this, R.raw.nombre_kung_lao);
+                temaDePersonaje = MediaPlayer.create(this,R.raw.tema_kung_lao);
+                elegirPersonaje.setNextMediaPlayer(nombrarPersonaje);
+                nombrarPersonaje.setNextMediaPlayer(temaDePersonaje);
+                temaDePersonaje.setLooping(true);
+                break;
 
-            nombrarPersonaje.start();
+            case 2:
+                temaDeFondo.pause();
+                elegirPersonaje = MediaPlayer.create(this, R.raw.efecto_elegir);
+                elegirPersonaje.start();
+                nombrarPersonaje = MediaPlayer.create(this, R.raw.nombre_johnny_cage);
+                temaDePersonaje = MediaPlayer.create(this,R.raw.tema_johnny_cage);
+                elegirPersonaje.setNextMediaPlayer(nombrarPersonaje);
+                nombrarPersonaje.setNextMediaPlayer(temaDePersonaje);
+                temaDePersonaje.setLooping(true);
+                break;
+
+            case 3:
+                temaDeFondo.pause();
+                elegirPersonaje = MediaPlayer.create(this, R.raw.efecto_elegir);
+                elegirPersonaje.start();
+                nombrarPersonaje = MediaPlayer.create(this, R.raw.nombre_reptile);
+                temaDePersonaje = MediaPlayer.create(this,R.raw.tema_reptile);
+                elegirPersonaje.setNextMediaPlayer(nombrarPersonaje);
+                nombrarPersonaje.setNextMediaPlayer(temaDePersonaje);
+                temaDePersonaje.setLooping(true);
+                break;
+
+            case 4:
+                temaDeFondo.pause();
+                elegirPersonaje = MediaPlayer.create(this, R.raw.efecto_elegir);
+                elegirPersonaje.start();
+                nombrarPersonaje = MediaPlayer.create(this, R.raw.nombre_sub_zero);
+                temaDePersonaje = MediaPlayer.create(this,R.raw.tema_sub_zero);
+                elegirPersonaje.setNextMediaPlayer(nombrarPersonaje);
+                nombrarPersonaje.setNextMediaPlayer(temaDePersonaje);
+                temaDePersonaje.setLooping(true);
+                break;
+
+            case 5:
+                temaDeFondo.pause();
+                elegirPersonaje = MediaPlayer.create(this, R.raw.efecto_elegir);
+                elegirPersonaje.start();
+                nombrarPersonaje = MediaPlayer.create(this, R.raw.nombre_shang_tsung);
+                temaDePersonaje = MediaPlayer.create(this,R.raw.tema_shang_tsung);
+                elegirPersonaje.setNextMediaPlayer(nombrarPersonaje);
+                nombrarPersonaje.setNextMediaPlayer(temaDePersonaje);
+                temaDePersonaje.setLooping(true);
+                break;
+
+            case 6:
+                temaDeFondo.pause();
+                elegirPersonaje = MediaPlayer.create(this, R.raw.efecto_elegir);
+                elegirPersonaje.start();
+                nombrarPersonaje = MediaPlayer.create(this, R.raw.nombre_kitana);
+                temaDePersonaje = MediaPlayer.create(this,R.raw.tema_kitana);
+                elegirPersonaje.setNextMediaPlayer(nombrarPersonaje);
+                nombrarPersonaje.setNextMediaPlayer(temaDePersonaje);
+                temaDePersonaje.setLooping(true);
+                break;
+
+            case 7:
+                temaDeFondo.pause();
+                elegirPersonaje = MediaPlayer.create(this, R.raw.efecto_elegir);
+                elegirPersonaje.start();
+                nombrarPersonaje = MediaPlayer.create(this, R.raw.nombre_jax);
+                temaDePersonaje = MediaPlayer.create(this,R.raw.tema_jax);
+                elegirPersonaje.setNextMediaPlayer(nombrarPersonaje);
+                nombrarPersonaje.setNextMediaPlayer(temaDePersonaje);
+                temaDePersonaje.setLooping(true);
+                break;
+
+            case 8:
+                temaDeFondo.pause();
+                elegirPersonaje = MediaPlayer.create(this, R.raw.efecto_elegir);
+                elegirPersonaje.start();
+                nombrarPersonaje = MediaPlayer.create(this, R.raw.nombre_mileena);
+                temaDePersonaje = MediaPlayer.create(this,R.raw.tema_mileena);
+                elegirPersonaje.setNextMediaPlayer(nombrarPersonaje);
+                nombrarPersonaje.setNextMediaPlayer(temaDePersonaje);
+                temaDePersonaje.setLooping(true);
+                break;
+
+            case 9:
+                temaDeFondo.pause();
+                elegirPersonaje = MediaPlayer.create(this, R.raw.efecto_elegir);
+                elegirPersonaje.start();
+                nombrarPersonaje = MediaPlayer.create(this, R.raw.nombre_baraka);
+                temaDePersonaje = MediaPlayer.create(this,R.raw.tema_baraka);
+                elegirPersonaje.setNextMediaPlayer(nombrarPersonaje);
+                nombrarPersonaje.setNextMediaPlayer(temaDePersonaje);
+                temaDePersonaje.setLooping(true);
+                break;
+
+            case 10:
+                temaDeFondo.pause();
+                elegirPersonaje = MediaPlayer.create(this, R.raw.efecto_elegir);
+                elegirPersonaje.start();
+                nombrarPersonaje = MediaPlayer.create(this, R.raw.nombre_scorpion);
+                temaDePersonaje = MediaPlayer.create(this,R.raw.tema_scorpion);
+                elegirPersonaje.setNextMediaPlayer(nombrarPersonaje);
+                nombrarPersonaje.setNextMediaPlayer(temaDePersonaje);
+                temaDePersonaje.setLooping(true);
+                break;
+
+            case 11:
+                temaDeFondo.pause();
+                elegirPersonaje = MediaPlayer.create(this, R.raw.efecto_elegir);
+                elegirPersonaje.start();
+                nombrarPersonaje = MediaPlayer.create(this, R.raw.nombre_raiden);
+                temaDePersonaje = MediaPlayer.create(this,R.raw.tema_raiden);
+                elegirPersonaje.setNextMediaPlayer(nombrarPersonaje);
+                nombrarPersonaje.setNextMediaPlayer(temaDePersonaje);
+                temaDePersonaje.setLooping(true);
+                break;
         }
     }
 }
