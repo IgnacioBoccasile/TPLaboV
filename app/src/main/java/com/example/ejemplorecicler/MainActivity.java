@@ -5,20 +5,14 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.app.Activity;
-import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
 import android.text.Html;
 import android.view.MenuItem;
 import android.content.Intent;
 import android.os.Bundle;
-
 import java.util.ArrayList;
 import java.util.List;
-
-import pl.droidsonroids.gif.GifImageView;
 
 public class MainActivity extends AppCompatActivity implements MyOnItemClick
 {
@@ -36,10 +30,6 @@ public class MainActivity extends AppCompatActivity implements MyOnItemClick
 
     private MediaPlayer temaDePersonaje;
 
-    private GifImageView stancePersonaje;
-
-    private String titulo = "hola";
-
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -55,18 +45,18 @@ public class MainActivity extends AppCompatActivity implements MyOnItemClick
 
         this.luchadores = new ArrayList<>();
 
-        this.luchadores.add(new LuchadorModelo("Liu Kang", R.drawable.img_liu_kang));
-        this.luchadores.add(new LuchadorModelo("Kung Lao", R.drawable.img_kung_lao));
-        this.luchadores.add(new LuchadorModelo("Johnny Cage", R.drawable.img_johnny_cage));
-        this.luchadores.add(new LuchadorModelo("Reptile", R.drawable.img_reptile));
-        this.luchadores.add(new LuchadorModelo("Sub Zero", R.drawable.img_sub_zero));
-        this.luchadores.add(new LuchadorModelo("Shang Tsung", R.drawable.img_shang_tsung));
-        this.luchadores.add(new LuchadorModelo("Kitana", R.drawable.img_kitana));
-        this.luchadores.add(new LuchadorModelo("Jax", R.drawable.img_jax));
-        this.luchadores.add(new LuchadorModelo("Mileena", R.drawable.img_mileena));
-        this.luchadores.add(new LuchadorModelo("Baraka", R.drawable.img_baraka));
-        this.luchadores.add(new LuchadorModelo("Scorpion", R.drawable.img_scorpion));
-        this.luchadores.add(new LuchadorModelo("Raiden", R.drawable.img_raiden));
+        this.luchadores.add(new LuchadorModelo("LIU KANG", R.drawable.img_liu_kang, getString(R.string.bio_liu_kang), getString(R.string.fatality1_liu_kang), R.drawable.liu_kang_fatality_1, getString(R.string.fatality2_liu_kang), R.drawable.liu_kang_fatality_2));
+        this.luchadores.add(new LuchadorModelo("KUNG LAO", R.drawable.img_kung_lao, getString(R.string.bio_kung_lao), getString(R.string.fatality1_kung_lao), R.drawable.kung_lao_fatality_1, getString(R.string.fatality2_kung_lao), R.drawable.kung_lao_fatality_2));
+        this.luchadores.add(new LuchadorModelo("JOHNNY CAGE", R.drawable.img_johnny_cage, getString(R.string.bio_johnny_cage), getString(R.string.fatality1_johnny_cage), R.drawable.johnny_cage_fatality_1, getString(R.string.fatality2_johnny_cage), R.drawable.johnny_cage_fatality_2));
+        this.luchadores.add(new LuchadorModelo("REPTILE", R.drawable.img_reptile, getString(R.string.bio_reptile), getString(R.string.fatality1_reptile), R.drawable.reptile_fatality_1, getString(R.string.fatality2_reptile), R.drawable.reptile_fatality_2));
+        this.luchadores.add(new LuchadorModelo("SUB-ZERO", R.drawable.img_sub_zero, getString(R.string.bio_sub_zero), getString(R.string.fatality1_sub_zero), R.drawable.sub_zero_fatality_1, getString(R.string.fatality2_sub_zero), R.drawable.sub_zero_fatality_2));
+        this.luchadores.add(new LuchadorModelo("SHANG TSUNG", R.drawable.img_shang_tsung, getString(R.string.bio_shang_tsung), getString(R.string.fatality1_shang_tsung), R.drawable.shang_tsung_fatality_1, getString(R.string.fatality2_shang_tsung), R.drawable.shang_tsung_fatality_2));
+        this.luchadores.add(new LuchadorModelo("KITANA", R.drawable.img_kitana, getString(R.string.bio_kitana), getString(R.string.fatality1_kitana), R.drawable.kitana_fatality_1, getString(R.string.fatality2_kitana), R.drawable.kitana_fatality_2));
+        this.luchadores.add(new LuchadorModelo("JAX", R.drawable.img_jax, getString(R.string.bio_jax), getString(R.string.fatality1_jax), R.drawable.jax_fatality_1, getString(R.string.fatality2_jax), R.drawable.jax_fatality_2));
+        this.luchadores.add(new LuchadorModelo("MILEENA", R.drawable.img_mileena, getString(R.string.bio_mileena), getString(R.string.fatality1_mileena), R.drawable.mileena_fatality_1, getString(R.string.fatality2_mileena), R.drawable.mileena_fatality_2));
+        this.luchadores.add(new LuchadorModelo("BARAKA", R.drawable.img_baraka, getString(R.string.bio_baraka), getString(R.string.fatality1_baraka), R.drawable.baraka_fatality_1, getString(R.string.fatality2_baraka), R.drawable.baraka_fatality_2));
+        this.luchadores.add(new LuchadorModelo("SCORPION", R.drawable.img_scorpion, getString(R.string.bio_scorpion), getString(R.string.fatality1_scorpion), R.drawable.scorpion_fatality_1, getString(R.string.fatality2_scorpion), R.drawable.scorpion_fatality_2));
+        this.luchadores.add(new LuchadorModelo("RAIDEN", R.drawable.img_raiden, getString(R.string.bio_raiden), getString(R.string.fatality1_raiden), R.drawable.raiden_fatality_1, getString(R.string.fatality2_raiden), R.drawable.raiden_fatality_2));
 
         this.adapter = new LuchadorAdapter(luchadores, this);
 
@@ -80,9 +70,11 @@ public class MainActivity extends AppCompatActivity implements MyOnItemClick
 
         ActionBar actionBar = getSupportActionBar();
 
-        actionBar.setTitle(Html.fromHtml("<font color=\"#FFFF00\">" + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp MORTAL KOMBAT WIKI" + "</font>"));
+        actionBar.setTitle(Html.fromHtml("<font face=\"sans-serif-black\" color=\"#C0C0C0\">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp MORTAL KOMBAT II WIKI</font>"));
 
-        Drawable d= getResources().getDrawable(R.drawable.fondo_menu);
+        actionBar.setSubtitle(Html.fromHtml("<small><font size = \" face=\"sans-serif-black\" color=\"#C0C0C0\">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp By Ignacio Nahuel Boccasile</font></small>"));
+
+        Drawable d = getResources().getDrawable(R.drawable.fondo_menu);
 
         actionBar.setBackgroundDrawable(d);
     }

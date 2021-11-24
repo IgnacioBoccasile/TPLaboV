@@ -1,4 +1,75 @@
 <resources>
-    <string name="app_name">Mortal Kombat Wiki</string>
-    <string name="editarLuchador">Modificar</string>
+    <string name="app_name">Mortal Kombat II Wiki</string>
+
+    <string name="bio_liu_kang">Después de arrebatarle a Shang Tsung el anterior Gran Torneo, Kang regresa a su templo, pero descubre su sagrado hogar en ruinas. Sus hermanos Shaolin murieron en una horrible batalla contra hordas de guerreros del Outworld. Ahora viajará hacia el terreno oscuro para cobrar venganza.</string>
+
+    <string name="bio_kung_lao">Monje Shaolin miembro de la Sociedad del Loto Blanco, último descendiente del Gran Kung Lao, quien fue derrotado por Goro hace 500 años, permitiendo que el Gran Torneo cayera en manos de Shang Tsung. Al darse cuenta de la amenaza del Outworld, Lao se une a Liu Kang en el torneo de Shao Kahn.</string>
+
+    <string name="bio_johnny_cage">Después del torneo de Shang Tsung, la súper estrella de artes marciales, Johnny Cage, desaparece. Él estaba siguiendo la pista de su aliado Liu Kang hasta el Outworld. Allí, planea competir en el torneo de Shao Kahn para así defender y salvar al Earthrealm. Aunque su principal interés quizá sea conseguir un nuevo guión para otra de sus películas.</string>
+
+    <string name="bio_reptile">Reptile se oculta entre las sombras acabando con cualquiera que se atreva a hacerle daño a su maestro, Shang Tsung. Se cree que su forma humana esconde a una horrible especie de reptil que se había extinguido hace ya millones de años. Él entra al torneo con la esperanza de derrotar a todos y así proteger a su amo.</string>
+
+    <string name="bio_sub_zero">Todos creyeron que Sub-Zero había sido asesinado en el gran torneo Shaolin, pero regresa misteriosamente. El clan Lin Kuei lo envía al torneo del Outworld para cumplir la tarea que no pudo realizar en el anterior torneo, asesinar a Shang Tsung.</string>
+
+    <string name="bio_shang_tsung">Luego de perder el anterior Gran Torneo y regresar al Outworld en desgracia, Shang Tsung le plantea una solución a su gobernante, Shao Kahn. La misma consistía en atraer a los guerreros del Earhtrealm a competir en el Outworld, y entonces, ganando o perdiendo, nunca dejarlos regresar. Convencido de este plan, Shao Kahn rejuvence a Shang Tsung, perdonándole la vida.</string>
+
+    <string name="bio_kitana">Su belleza esconde su verdadero papel, la asesina personal de Shao Kahn. Desde que la vieron platicando con Liu Kang, guerrero del Earthrealm, su hermana gemela, Mileena, ha estado sospechando de ella. Pero solo Kitana conoce sus propias y verdaderas intenciones.</string>
+
+    <string name="bio_jax">El mayor Jackson Briggs es el líder de las Fuerzas Especiales de los Estados Unidos de América, de donde la teniente y compañera Sonya Blade era miembro. Después de recibir una señal de Sonya, Jax se embarca en una misión de rescate, con la esperanza tanto de salvarla, como de atrapar al escurridizo Kano, criminal y líder de la organización Dragón Negro. El rastro de Sonya lo lleva al terrible Outworld.</string>
+
+    <string name="bio_mileena">Es la hermana gemela de Kitana, y trabaja junto a ella para Shao Kahn, como asesina. Éste le ha pedido a Mileena que vigile a Kitana, ya que sospecha que pueda tener algún plan en mente. Debe evitar a toda costa una posible traición.</string>
+
+    <string name="bio_baraka">Baraka pertenece a una raza nómada de mutantes que viven en los yermos del Outworld. Sus técnicas de pelea ganaron la atención de Shao Kahn, quien lo incluyó en su ejército de destrucción. Él fue quien dirigió el ataque contra los templos Shaolin.</string>
+
+    <string name="bio_scorpion">El espectro reencarnado regresa al enterarse de la misteriosa aparición de Sub-Zero. Nuevamente acecha al ninja siguiéndolo hasta el oscuro Outworld, donde continúa su misión, vengar su propia muerte a manos del Lin Kuei.</string>
+
+    <string name="bio_raiden">Observando los eventos desde las alturas del cielo, el dios del trueno se da cuenta de las terribles intenciones de Shao Kahn. Después de alertar a los miembros que quedaron del anterior Gran Torneo, Raiden rápidamente desaparece. Seguramente su destino sea el mismo Outworld.</string>
+
+    <string name="fatality1_liu_kang">Gancho de Giro de Mariposa: Rotar el joystick 360° hacia la izquierda (a media distancia del oponente)</string>
+
+    <string name="fatality2_liu_kang">Dragón: Abajo, Adelante, Atrás, Atrás + Patada Alta (pegado al oponente)</string>
+
+    <string name="fatality1_kung_lao">Decapitación de Sombrero: Mantener presionado Golpe Bajo, Atrás, Adelante, soltar Golpe Bajo (lejos del oponente)</string>
+
+    <string name="fatality2_kung_lao">Corte de Cuerpo: Adelante, Adelante, Adelante + Patada Baja (a un paso del oponente)</string>
+
+    <string name="fatality1_johnny_cage">Puñetazo Decapitador: Adelante, Adelante, Abajo, Arriba (pegado al oponente)</string>
+
+    <string name="fatality2_johnny_cage">Bifurcación: Abajo, Abajo, Adelante, Adelante + Golpe Bajo (a un paso del oponente)</string>
+
+    <string name="fatality1_reptile">Devoración de Cabeza: Atrás, Atrás, Abajo + Golpe Bajo (a un salto del oponente)</string>
+
+    <string name="fatality2_reptile">Corte de Cuerpos: Activar invisibilidad (Bloqueo, Arriba, Arriba, Abajo + Golpe Alto), Adelante, Adelante, Abajo + Patada Alta (pegado al oponente)</string>
+
+    <string name="fatality1_sub_zero">Cero Absoluto: Congelar (Adelante, Adelante, Abajo + Patada Alta), Adelante, Abajo, Adelante, Adelante + Golpe Alto (pegado al oponente)</string>
+
+    <string name="fatality2_sub_zero">Bomba de Hielo: Golpe Bajo, Atrás, Atrás, Abajo, Adelante (lejos del oponente)</string>
+
+    <string name="fatality1_shang_tsung">Absorción de Alma Humana: Mantener presionado Bloqueo, Arriba, Abajo, Arriba + Patada Baja (pegado al oponente)</string>
+
+    <string name="fatality2_shang_tsung">Inserción de Cuerpos: Mantener presionado Patada Alta por cuatro segundos y soltar (a un salto del oponente)</string>
+
+    <string name="fatality1_kitana">Abanico de Decapitación: Bloqueo, Bloqueo, Bloqueo + Patada Alta (pegado al oponente)</string>
+
+    <string name="fatality2_kitana">Beso de la Muerte: Mantener presionado Patada Baja, Adelante, Adelante, Abajo, Adelante, soltar Patada Baja (pegado al oponente)</string>
+
+    <string name="fatality1_jax">Arranca Brazos: Bloqueo, Bloqueo, Bloqueo, Bloqueo + Golpe Bajo (a un salto del oponente)</string>
+
+    <string name="fatality2_jax">Brazos de Aplanamiento: Mantener presionado Golpe Bajo, Adelante, Adelante, Adelante, soltar Golpe Bajo (pegado al oponente)</string>
+
+    <string name="fatality1_mileena">Apuñalamiento de Dagas: Adelante, Atrás, Adelante + Golpe Bajo (pegado al oponente)</string>
+
+    <string name="fatality2_mileena">Devora-Cuerpo: Mantener presionado Patada Alta por tres segundos y soltar (pegado al oponente)</string>
+
+    <string name="fatality1_baraka">Apuñalamiento de Brazos Punzantes: Bloqueo, Atrás, Adelante, Abajo, Adelante + Golpe Bajo (pegado al oponente)</string>
+
+    <string name="fatality2_baraka">Decapitación de Brazos Punzantes: Bloqueo, Atrás, Atrás, Atrás, Atrás + Golpe Alto (pegado al oponente)</string>
+
+    <string name="fatality1_scorpion">Toasty: Bloqueo, Abajo, Abajo, Arriba, Arriba + Golpe Alto</string>
+
+    <string name="fatality2_scorpion">Corte de Lanza: Mantener Golpe Alto tres segundos, Abajo, Adelante, Adelante, Adelante, soltar Golpe Alto (pegado al oponente)</string>
+
+    <string name="fatality1_raiden">Electrocutación: Mantener presionado Patada Baja por tres segundos, soltar Patada Baja y presionar simultáneamente Patada Baja + Bloqueo (pegado al oponente)</string>
+
+    <string name="fatality2_raiden">Choque Eléctrico: Mantener presionado Golpe Alto por seis segundos y soltar (pegado al oponente)</string>
 </resources>
