@@ -33,7 +33,7 @@ public class LuchadorModelo implements Serializable
 
         this.imagenFatality1 = imagenFatality1;
 
-        this.txtFatality2= txtFatality2;
+        this.txtFatality2 = txtFatality2;
 
         this.imagenFatality2 = imagenFatality2;
     }

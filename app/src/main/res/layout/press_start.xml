@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:tools = "http://schemas.android.com/tools"
+    android:background = "@drawable/fondo_start"
+    android:layout_width = "match_parent"
+    android:layout_height = "match_parent"
+    android:gravity = "top"
+    tools:context = ".Start"
+    android:orientation = "vertical">
+    <ImageView
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:src = "@drawable/mk2_logo"
+        android:layout_marginRight = "50dp"
+        android:layout_marginLeft = "50dp"
+    />
+    <pl.droidsonroids.gif.GifImageView
+        android:id = "@+id/start"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:layout_gravity = "center"
+        android:layout_marginTop = "130dp"
+        android:src = "@drawable/start"
+    />
+    <ImageView
+        android:layout_width = "100dp"
+        android:layout_height = "100dp"
+        android:src = "@drawable/octocat"
+        android:layout_gravity = "center"
+        android:layout_marginTop = "190dp"
+    />
+    <TextView
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:text = "Desarrollador:"
+        android:fontFamily = "@font/fsex300"
+        android:layout_gravity = "center"
+        android:layout_marginTop = "10dp"
+        android:textSize = "25dp"
+        android:textColor = "#FFFF00"
+    />
+    <TextView
+        android:id = "@+id/gitHub"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:text = "@string/git_hub"
+        android:fontFamily = "@font/fsex300"
+        android:layout_gravity = "center"
+        android:layout_marginTop = "10dp"
+        android:textSize = "20dp"
+        android:textColor = "#FFFF00"
+    />
+</LinearLayout>

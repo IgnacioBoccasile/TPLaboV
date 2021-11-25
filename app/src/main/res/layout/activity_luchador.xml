@@ -1,124 +1,122 @@
 <?xml version = "1.0" encoding = "utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/scrollView"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/fondo_luchador"
-    android:id="@+id/activityLuchador"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
-
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center"
-        android:id="@+id/imagenLuchador"
-    />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Biografía"
-        android:textSize="30dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginLeft="20dp"
-        android:fontFamily="@font/fsex300"
-        android:textColor="#C0C0C0"
+<ScrollView
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    xmlns:tools = "http://schemas.android.com/tools"
+    android:id = "@+id/scrollView"
+    android:layout_width = "match_parent"
+    android:layout_height = "match_parent">
+    <LinearLayout
+        xmlns:android = "http://schemas.android.com/apk/res/android"
+        xmlns:app = "http://schemas.android.com/apk/res-auto"
+        android:background = "@drawable/fondo_luchador"
+        android:id = "@+id/activityLuchador"
+        xmlns:tools = "http://schemas.android.com/tools"
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent"
+        android:orientation = "vertical"
+        tools:context = ".MainActivity">
+        <ImageView
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:layout_marginTop = "20dp"
+            android:layout_gravity = "center"
+            android:id = "@+id/imagenLuchador"
         />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:textSize="20dp"
-        android:text="_____________________________________"
-        android:fontFamily="@font/fsex300"
-        android:textColor="#C0C0C0"
+        <TextView
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:text = "Biografía"
+            android:textSize = "30dp"
+            android:layout_marginTop = "40dp"
+            android:layout_marginLeft = "20dp"
+            android:fontFamily = "@font/fsex300"
+            android:textColor = "#C0C0C0"
         />
-
-    <TextView
-        android:id="@+id/txtBio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="30dp"
-        android:textSize="20dp"
-        android:fontFamily="@font/fsex300"
-        android:textColor="#C0C0C0"
+        <TextView
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:layout_marginLeft = "20dp"
+            android:layout_marginRight = "20dp"
+            android:textSize = "20dp"
+            android:text = "_____________________________________"
+            android:fontFamily = "@font/fsex300"
+            android:textColor = "#C0C0C0"
         />
-
-    <pl.droidsonroids.gif.GifImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/fatality"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="20dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:textSize="20dp"
-        android:text="_____________________________________"
-        android:fontFamily="@font/fsex300"
-        android:textColor="#C0C0C0"
+        <TextView
+            android:id = "@+id/txtBio"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:layout_marginLeft = "30dp"
+            android:layout_marginTop = "20dp"
+            android:layout_marginRight = "30dp"
+            android:textSize = "20dp"
+            android:fontFamily = "@font/fsex300"
+            android:textColor = "#C0C0C0"
         />
-    <TextView
-        android:id="@+id/txtFatality1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="30dp"
-        android:textSize="20dp"
-        android:fontFamily="@font/fsex300"
-        android:textColor="#C0C0C0"
+        <pl.droidsonroids.gif.GifImageView
+            android:id = "@+id/fatality"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:src = "@drawable/fatality"
+            android:layout_marginTop = "50dp"
+            android:layout_marginLeft = "20dp"
+            app:layout_constraintRight_toRightOf = "parent"
+            app:layout_constraintLeft_toLeftOf = "parent"
+            app:layout_constraintBottom_toBottomOf = "parent"
         />
-    <pl.droidsonroids.gif.GifImageView
-        android:id="@+id/imgFatality1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginRight="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-    />
-    <TextView
-        android:id="@+id/txtFatality2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="40dp"
-        android:textSize="20dp"
-        android:fontFamily="@font/fsex300"
-        android:textColor="#C0C0C0"
+        <TextView
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:layout_marginLeft = "20dp"
+            android:layout_marginRight = "20dp"
+            android:textSize = "20dp"
+            android:text = "_____________________________________"
+            android:fontFamily = "@font/fsex300"
+            android:textColor = "#C0C0C0"
         />
-    <pl.droidsonroids.gif.GifImageView
-        android:id="@+id/imgFatality2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginRight="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        <TextView
+            android:id = "@+id/txtFatality1"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:layout_marginLeft = "30dp"
+            android:layout_marginTop = "20dp"
+            android:layout_marginRight = "30dp"
+            android:textSize = "20dp"
+            android:fontFamily = "@font/fsex300"
+            android:textColor = "#C0C0C0"
         />
-</LinearLayout>
+        <pl.droidsonroids.gif.GifImageView
+            android:id = "@+id/imgFatality1"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:layout_gravity = "center"
+            android:layout_marginRight = "30dp"
+            android:layout_marginLeft = "30dp"
+            android:layout_marginTop = "20dp"
+            app:layout_constraintBottom_toBottomOf = "parent"
+        />
+        <TextView
+            android:id = "@+id/txtFatality2"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:layout_marginLeft = "30dp"
+            android:layout_marginRight = "30dp"
+            android:layout_marginTop = "40dp"
+            android:textSize = "20dp"
+            android:fontFamily = "@font/fsex300"
+            android:textColor = "#C0C0C0"
+        />
+        <pl.droidsonroids.gif.GifImageView
+            android:id = "@+id/imgFatality2"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:layout_gravity = "center"
+            android:layout_marginRight = "30dp"
+            android:layout_marginLeft = "30dp"
+            android:layout_marginTop = "20dp"
+            android:layout_marginBottom = "30dp"
+            app:layout_constraintBottom_toBottomOf = "parent"
+        />
+    </LinearLayout>
 </ScrollView>

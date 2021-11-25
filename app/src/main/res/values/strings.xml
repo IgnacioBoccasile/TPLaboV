@@ -1,4 +1,8 @@
 <resources>
+    <string name="git_hub">
+        <a href="https://github.com/IgnacioBoccasile">Ignacio Nahuel Boccasile</a>
+    </string>
+
     <string name="app_name">Mortal Kombat II Wiki</string>
 
     <string name="bio_liu_kang">Después de arrebatarle a Shang Tsung el anterior Gran Torneo, Kang regresa a su templo, pero descubre su sagrado hogar en ruinas. Sus hermanos Shaolin murieron en una horrible batalla contra hordas de guerreros del Outworld. Ahora viajará hacia el terreno oscuro para cobrar venganza.</string>
@@ -7,13 +11,13 @@
 
     <string name="bio_johnny_cage">Después del torneo de Shang Tsung, la súper estrella de artes marciales, Johnny Cage, desaparece. Él estaba siguiendo la pista de su aliado Liu Kang hasta el Outworld. Allí, planea competir en el torneo de Shao Kahn para así defender y salvar al Earthrealm. Aunque su principal interés quizá sea conseguir un nuevo guión para otra de sus películas.</string>
 
-    <string name="bio_reptile">Reptile se oculta entre las sombras acabando con cualquiera que se atreva a hacerle daño a su maestro, Shang Tsung. Se cree que su forma humana esconde a una horrible especie de reptil que se había extinguido hace ya millones de años. Él entra al torneo con la esperanza de derrotar a todos y así proteger a su amo.</string>
+    <string name="bio_reptile">Reptile se oculta entre las sombras, acabando con cualquiera que se atreva a hacerle daño a su maestro, Shang Tsung. Se cree que su forma humana esconde a una horrible especie de reptil que se había extinguido hace ya millones de años. Él entra al torneo con la esperanza de derrotar a todos y así proteger a su amo.</string>
 
     <string name="bio_sub_zero">Todos creyeron que Sub-Zero había sido asesinado en el gran torneo Shaolin, pero regresa misteriosamente. El clan Lin Kuei lo envía al torneo del Outworld para cumplir la tarea que no pudo realizar en el anterior torneo, asesinar a Shang Tsung.</string>
 
     <string name="bio_shang_tsung">Luego de perder el anterior Gran Torneo y regresar al Outworld en desgracia, Shang Tsung le plantea una solución a su gobernante, Shao Kahn. La misma consistía en atraer a los guerreros del Earhtrealm a competir en el Outworld, y entonces, ganando o perdiendo, nunca dejarlos regresar. Convencido de este plan, Shao Kahn rejuvence a Shang Tsung, perdonándole la vida.</string>
 
-    <string name="bio_kitana">Su belleza esconde su verdadero papel, la asesina personal de Shao Kahn. Desde que la vieron platicando con Liu Kang, guerrero del Earthrealm, su hermana gemela, Mileena, ha estado sospechando de ella. Pero solo Kitana conoce sus propias y verdaderas intenciones.</string>
+    <string name="bio_kitana">Su belleza esconde su verdadero papel, asesina personal de Shao Kahn. Desde que la vieron platicando con Liu Kang, guerrero del Earthrealm, su hermana gemela, Mileena, ha estado sospechando de ella. Pero solo Kitana conoce sus propias y verdaderas intenciones.</string>
 
     <string name="bio_jax">El mayor Jackson Briggs es el líder de las Fuerzas Especiales de los Estados Unidos de América, de donde la teniente y compañera Sonya Blade era miembro. Después de recibir una señal de Sonya, Jax se embarca en una misión de rescate, con la esperanza tanto de salvarla, como de atrapar al escurridizo Kano, criminal y líder de la organización Dragón Negro. El rastro de Sonya lo lleva al terrible Outworld.</string>
 

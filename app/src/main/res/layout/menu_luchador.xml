@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center"
-    android:orientation="vertical">
-
+<LinearLayout
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    android:layout_width = "wrap_content"
+    android:layout_height = "wrap_content"
+    android:layout_gravity = "center"
+    android:orientation = "vertical">
     <TextView
-        android:id="@+id/txtTitle"
-        style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:fontFamily="@font/fsex300"
-        android:textSize="25dp"
-        android:textColor="#C0C0C0"
+        android:id = "@+id/txtTitle"
+        style = "@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:gravity = "center"
+        android:fontFamily = "@font/fsex300"
+        android:textSize = "25dp"
+        android:textColor = "#C0C0C0"
     />
-
 </LinearLayout>

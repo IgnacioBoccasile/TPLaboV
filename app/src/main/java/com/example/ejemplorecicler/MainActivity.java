@@ -1,13 +1,10 @@
 package com.example.ejemplorecicler;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
-import android.text.Html;
 import android.view.MenuItem;
 import android.content.Intent;
 import android.os.Bundle;
@@ -67,16 +64,6 @@ public class MainActivity extends AppCompatActivity implements MyOnItemClick
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this,4);
 
         rv.setLayoutManager(gridLayoutManager);
-
-        ActionBar actionBar = getSupportActionBar();
-
-        actionBar.setTitle(Html.fromHtml("<font face=\"sans-serif-black\" color=\"#C0C0C0\">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp MORTAL KOMBAT II WIKI</font>"));
-
-        actionBar.setSubtitle(Html.fromHtml("<small><font size = \" face=\"sans-serif-black\" color=\"#C0C0C0\">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp By Ignacio Nahuel Boccasile</font></small>"));
-
-        Drawable d = getResources().getDrawable(R.drawable.fondo_menu);
-
-        actionBar.setBackgroundDrawable(d);
     }
 
     @Override
@@ -135,6 +122,8 @@ public class MainActivity extends AppCompatActivity implements MyOnItemClick
         this.itemElegido = position;
 
         startActivity(intent);
+
+        overridePendingTransition(R.anim.translate_left_side, R.anim.translate_right_side);
 
         switch(this.itemElegido)
         {
